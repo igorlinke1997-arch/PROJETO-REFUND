@@ -1,0 +1,300 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #e4ece9;
+  color: #1f2523;
+}
+
+main {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.logo {
+  display: block;
+  margin: 3rem 0 2rem;
+}
+
+main section {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding-bottom: 2rem;
+}
+
+form,
+aside {
+  background-color: #f9fbfa;
+  border-radius: 1rem;
+  padding: 2.5rem;
+}
+
+form {
+  width: 462px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+form h1 {
+  font-size: 1.25rem;
+}
+
+form p {
+  font-size: 0.87rem;
+  color: #4d5c57;
+  margin: 0.75rem 0 2.5rem;
+  line-height: 1.6;
+}
+
+fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+fieldset legend {
+  text-transform: uppercase;
+  font-size: 0.62rem;
+  color: #4d5c57;
+  margin-bottom: 0.5rem;
+}
+
+fieldset:focus-within legend {
+  color: #1f8459;
+  font-weight: 700;
+}
+
+input,
+select {
+  width: 100%;
+  height: 3rem;
+  border-radius: 0.5rem;
+  border: 1px solid #cdd5d2;
+  padding: 0 1rem;
+  font-family: inherit;
+  font-size: 0.87rem;
+  color: #1f2523;
+  background-color: transparent;
+  outline: none;
+}
+
+select {
+  appearance: none;
+  background-image: url("./imagens/chevron-down.svg");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem center;
+  background-size: 1.25rem;
+  padding-right: 2.5rem;
+}
+
+input::placeholder,
+select:invalid {
+  color: #4d5c57;
+}
+
+input:focus,
+select:focus {
+  border: 1.5px solid #1f8459;
+}
+
+.inputs-row {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.inputs-row fieldset:first-child {
+  flex: 1;
+}
+
+.inputs-row fieldset:last-child {
+  width: 154px;
+}
+
+form button {
+  height: 3rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-family: inherit;
+  font-size: 0.87rem;
+  color: #ffffff;
+  background-color: #1f8459;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 2rem;
+}
+
+form button:hover {
+  background-color: #2cb178;
+}
+
+aside {
+  flex: 1;
+  min-width: 0;
+  min-height: 428px;
+}
+
+aside header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid #e4ece9;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+aside header p {
+  color: #4d5c57;
+  font-size: 1rem;
+}
+
+aside header p span {
+  font-size: 0.87rem;
+}
+
+aside header p i {
+  color: #cdd5d2;
+  margin: 0 0.5rem;
+  font-style: normal;
+}
+
+aside header h2 {
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+aside header small {
+  color: #4d5c57;
+  font-weight: 400;
+  font-size: 0.75rem;
+  margin-right: 0.25rem;
+}
+
+aside ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-height: 310px;
+  overflow-y: auto;
+}
+
+.expense {
+  display: flex;
+  align-items: center;
+  min-height: 38px;
+  gap: 0.75rem;
+}
+
+.expense img:first-child {
+  width: 2rem;
+  height: 2rem;
+}
+
+.expense-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.expense-info strong {
+  font-size: 0.87rem;
+  overflow-wrap: anywhere;
+}
+
+.expense-info span {
+  font-size: 0.75rem;
+  color: #4d5c57;
+}
+
+.expense-amount {
+  font-size: 0.87rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.expense-amount small {
+  font-size: 0.75rem;
+  color: #4d5c57;
+  font-weight: 400;
+  margin-right: 0.25rem;
+}
+
+.remove-icon {
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.remove-icon:hover {
+  opacity: 0.7;
+}
+
+.remove-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1100px) {
+  main section {
+    flex-direction: column;
+  }
+
+  form,
+  aside {
+    width: 100%;
+  }
+}
+
+@media (max-width: 620px) {
+  :root {
+    font-size: 14px;
+  }
+
+  main {
+    padding: 0 16px;
+  }
+
+  form,
+  aside {
+    padding: 1.5rem;
+  }
+
+  .inputs-row {
+    flex-direction: column;
+  }
+
+  .inputs-row fieldset:last-child {
+    width: 100%;
+  }
+
+  aside header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
